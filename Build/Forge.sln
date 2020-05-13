@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30104.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BsFramework", "BsFramework", "{7807FF9A-F019-437E-9A90-AC22D7E1344D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{12A05B09-8107-49EA-86E5-15DAEB8CB814}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BsLib", "BsLib.vcxproj", "{103EF3C5-0262-45CD-BBD9-1210EC7D0C4E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Forge", "Forge.vcxproj", "{81D42D12-F8B1-44FD-8D9E-67A178F13928}"
+	ProjectSection(ProjectDependencies) = postProject
+		{103EF3C5-0262-45CD-BBD9-1210EC7D0C4E} = {103EF3C5-0262-45CD-BBD9-1210EC7D0C4E}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{103EF3C5-0262-45CD-BBD9-1210EC7D0C4E}.Debug|x64.ActiveCfg = Debug|x64
+		{103EF3C5-0262-45CD-BBD9-1210EC7D0C4E}.Debug|x64.Build.0 = Debug|x64
+		{103EF3C5-0262-45CD-BBD9-1210EC7D0C4E}.Release|x64.ActiveCfg = Release|x64
+		{103EF3C5-0262-45CD-BBD9-1210EC7D0C4E}.Release|x64.Build.0 = Release|x64
+		{81D42D12-F8B1-44FD-8D9E-67A178F13928}.Debug|x64.ActiveCfg = Debug|x64
+		{81D42D12-F8B1-44FD-8D9E-67A178F13928}.Debug|x64.Build.0 = Debug|x64
+		{81D42D12-F8B1-44FD-8D9E-67A178F13928}.Release|x64.ActiveCfg = Release|x64
+		{81D42D12-F8B1-44FD-8D9E-67A178F13928}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{103EF3C5-0262-45CD-BBD9-1210EC7D0C4E} = {7807FF9A-F019-437E-9A90-AC22D7E1344D}
+		{81D42D12-F8B1-44FD-8D9E-67A178F13928} = {12A05B09-8107-49EA-86E5-15DAEB8CB814}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8DD79165-EA75-47CF-85BA-63D81C101B73}
+	EndGlobalSection
+EndGlobal
