@@ -11,6 +11,8 @@ namespace Bs::Framework
 
 	void Application::Stop()
 	{
+		m_nativeWindow->Deactivate();
+		m_nativeWindow.reset();
 	}
 
 	void Application::RunMainLoop()
@@ -24,8 +26,8 @@ namespace Bs::Framework
 			{
 				if (msg.message == WM_QUIT)
 				{
-					m_nativeWindow->Deactivate();
-					break;
+					ExitMainLoop();
+					run = false;
 				}
 
 				TranslateMessage(&msg);

@@ -7,11 +7,8 @@ int WINAPI WinMain(HINSTANCE instance, HINSTANCE previousInstance, LPSTR command
 	using namespace Bs::Framework;
 
 	Application app;
-
 	app.Start();
-
 	app.RunMainLoop();
-
 	app.Stop();
 
 	return 0;
