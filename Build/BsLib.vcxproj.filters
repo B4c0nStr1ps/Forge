@@ -32,5 +32,11 @@
     <ClInclude Include="..\Source\BsLib\Core\Core.h">
       <Filter>Core</Filter>
     </ClInclude>
+    <ClInclude Include="..\Source\BsLib\Core\Pointer.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\BsLib\Core\String.h">
+      <Filter>Core</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -4,7 +4,7 @@ namespace Bs::Framework
 {
 	const char* s_defaultClassName = "BsFrameworkWin32Class";
 
-	NativeWindow::NativeWindow(const std::string& title, const WindowGeometry& geometry)
+	NativeWindow::NativeWindow(const String& title, const WindowGeometry& geometry)
 		: m_activated(false)
 		, m_width(geometry.width)
 		, m_height(geometry.height)
@@ -108,6 +108,8 @@ namespace Bs::Framework
 			return DefWindowProc(hWnd, message, wParam, lParam);
 			break;
 		}
+
+		return 0;
 	}
 	void NativeWindow::WindowSizeChanged(u32 width, u32 height)
 	{

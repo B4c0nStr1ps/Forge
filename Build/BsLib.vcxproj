@@ -168,6 +168,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Source\BsLib\Core\Core.h" />
+    <ClInclude Include="..\Source\BsLib\Core\Pointer.h" />
+    <ClInclude Include="..\Source\BsLib\Core\String.h" />
     <ClInclude Include="..\Source\BsLib\Core\Types.h" />
     <ClInclude Include="..\Source\BsLib\Framework\Application.h" />
     <ClInclude Include="..\Source\BsLib\Framework\NativeWindow.h" />

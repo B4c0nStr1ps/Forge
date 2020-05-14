@@ -24,7 +24,7 @@ namespace Bs::Framework
 	class NativeWindow
 	{
 	public:
-		NativeWindow(const std::string& title, const WindowGeometry& geometry);
+		NativeWindow(const String& title, const WindowGeometry& geometry);
 		~NativeWindow();
 
 		void Activate();

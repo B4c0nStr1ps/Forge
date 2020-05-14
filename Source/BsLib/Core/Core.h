@@ -1,3 +1,4 @@
 #pragma once
 #include "Types.h"
-#include <string>
+#include "Pointer.h"
+#include "String.h"

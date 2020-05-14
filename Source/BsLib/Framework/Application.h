@@ -1,7 +1,7 @@
 #pragma once
 
+#include "..\Core\Core.h"
 #include "NativeWindow.h"
-#include <memory>
 
 namespace Bs::Framework
 {
@@ -19,6 +19,6 @@ namespace Bs::Framework
 
 	protected:
 		bool m_exitMainLoopRequested = false;
-		std::unique_ptr<NativeWindow> m_nativeWindow;
+		UniquePtr<NativeWindow> m_nativeWindow;
 	};
 }
