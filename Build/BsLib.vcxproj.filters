@@ -38,5 +38,20 @@
     <ClInclude Include="..\Source\BsLib\Core\String.h">
       <Filter>Core</Filter>
     </ClInclude>
+    <ClInclude Include="..\Source\BsLib\Core\DebugBreak.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\BsLib\Core\Assertion.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\BsLib\Core\TypeTraits.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\BsLib\Core\Function.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\BsLib\Core\Array.h">
+      <Filter>Core</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

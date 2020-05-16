@@ -167,10 +167,15 @@
     <ClCompile Include="..\Source\BsLib\Framework\NativeWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Source\BsLib\Core\Array.h" />
+    <ClInclude Include="..\Source\BsLib\Core\Assertion.h" />
     <ClInclude Include="..\Source\BsLib\Core\Core.h" />
+    <ClInclude Include="..\Source\BsLib\Core\DebugBreak.h" />
+    <ClInclude Include="..\Source\BsLib\Core\Function.h" />
     <ClInclude Include="..\Source\BsLib\Core\Pointer.h" />
     <ClInclude Include="..\Source\BsLib\Core\String.h" />
     <ClInclude Include="..\Source\BsLib\Core\Types.h" />
+    <ClInclude Include="..\Source\BsLib\Core\TypeTraits.h" />
     <ClInclude Include="..\Source\BsLib\Framework\Application.h" />
     <ClInclude Include="..\Source\BsLib\Framework\NativeWindow.h" />
     <ClInclude Include="..\Source\BsLib\Framework\WindowsApi.h" />
