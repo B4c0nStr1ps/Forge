@@ -80,5 +80,8 @@
     <ClInclude Include="..\Source\BsLib\Rendering\D3D11Api.h">
       <Filter>Rendering</Filter>
     </ClInclude>
+    <ClInclude Include="..\Source\BsLib\Core\FixedArray.h">
+      <Filter>Core</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

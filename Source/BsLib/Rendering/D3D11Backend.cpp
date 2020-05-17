@@ -1,13 +1,8 @@
 #include "D3D11Backend.h"
 #include "../Core/Assertion.h"
+#include "../Core/FixedArray.h"
 
 #define VERIFYD3D11RESULT(x)			{HRESULT hr = x; if (FAILED(hr)) { PANIC(); }}
-
-// TODO remove size helper.
-template <class _Ty, size_t _Size>
-_NODISCARD constexpr size_t size(const _Ty(&)[_Size]) noexcept {
-	return _Size;
-}
 
 namespace Bs::Rendering
 {
@@ -20,8 +15,7 @@ namespace Bs::Rendering
 		deviceFlags |= D3D11_CREATE_DEVICE_DEBUG;
 #endif
 
-		// TODO Change in FixedArray
-		D3D_FEATURE_LEVEL featureLevels[] = {
+		FixedArray<D3D_FEATURE_LEVEL, 4> featureLevels = {
 			D3D_FEATURE_LEVEL_11_1,
 			D3D_FEATURE_LEVEL_11_0,
 			D3D_FEATURE_LEVEL_10_1,
@@ -36,8 +30,8 @@ namespace Bs::Rendering
 			D3D_DRIVER_TYPE_HARDWARE,
 			nullptr,
 			deviceFlags,
-			featureLevels,
-			(u32)size(featureLevels),
+			featureLevels.Data(),
+			featureLevels.Size(),
 			D3D11_SDK_VERSION,
 			direct3DDevice.GetAddressOf(),
 			&m_featureLevel,
@@ -67,7 +61,7 @@ namespace Bs::Rendering
 
 	void D3D11Backend::Draw()
 	{
-		const float const backgroundColor[4] { 0.392f, 0.584f, 0.929f, 1.0f };		
+		const float backgroundColor[4] { 0.392f, 0.584f, 0.929f, 1.0f };		
 		m_deviceContext->ClearRenderTargetView(m_renderTargetView.Get(), backgroundColor);
 		m_deviceContext->ClearDepthStencilView(m_depthStencilView.Get(), D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0);
 		VERIFYD3D11RESULT(m_swapChain->Present(0, 0));
