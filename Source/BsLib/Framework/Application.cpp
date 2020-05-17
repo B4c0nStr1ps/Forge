@@ -1,16 +1,26 @@
 #include "Application.h"
+//#include "../Rendering/D3D11Backend.h"
 
 namespace Bs::Framework
 {
 	void Application::Start()
 	{
-		WindowGeometry nativeWindowGeometry(0, 0, 1920, 1080);
-		m_nativeWindow = std::make_unique<NativeWindow>("Forge", nativeWindowGeometry);
+		Rendering::D3D11Backend::Settings renderingSettings {};
+		renderingSettings.viewport.geometry = {0, 0, 1920, 1080};
+
+		m_nativeWindow = std::make_unique<NativeWindow>("Forge", renderingSettings.viewport.geometry);
 		m_nativeWindow->Activate();
+
+		m_renderingBackend = std::make_unique<Rendering::D3D11Backend>();
+		m_renderingBackend->Initialize(renderingSettings);
+
+		m_renderingBackend->CreateViewport(renderingSettings.viewport, m_nativeWindow->GetHandle());
 	}
 
 	void Application::Stop()
 	{
+		m_renderingBackend->Shutdown();
+
 		m_nativeWindow->Deactivate();
 		m_nativeWindow.reset();
 	}
@@ -35,6 +45,11 @@ namespace Bs::Framework
 			if (!m_nativeWindow->IsActive())
 			{
 				ExitMainLoop();
+			}
+
+			if (!WasExitMainLoopRequested())
+			{
+				m_renderingBackend->Draw();
 			}
 		}
 	}

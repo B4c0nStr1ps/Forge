@@ -4,7 +4,7 @@ namespace Bs::Framework
 {
 	const char* s_defaultClassName = "BsFrameworkWin32Class";
 
-	NativeWindow::NativeWindow(const String& title, const WindowGeometry& geometry)
+	NativeWindow::NativeWindow(const String& title, const Rect2D& geometry)
 		: m_activated(false)
 		, m_width(geometry.width)
 		, m_height(geometry.height)
@@ -42,7 +42,7 @@ namespace Bs::Framework
 			m_win32Handle = CreateWindow(
 				s_defaultClassName, title.c_str(),
 				WS_OVERLAPPEDWINDOW,
-				geometry.posX, geometry.posY, geometry.width, geometry.height,
+				geometry.x, geometry.y, geometry.width, geometry.height,
 				NULL, NULL, hInstance, NULL);
 
 			if (m_win32Handle == nullptr)

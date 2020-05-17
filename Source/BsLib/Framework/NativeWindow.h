@@ -1,35 +1,20 @@
 #pragma once
 #include "../Core/Core.h"
+#include "../Core/Rect2D.h"
 #include "WindowsApi.h"
 
 namespace Bs::Framework
 {
-	struct WindowGeometry
-	{
-		WindowGeometry() = default;
-
-		WindowGeometry(const u32 posX, const u32 posY, const u32 width, const u32 height)
-			: posX(posX)
-			, posY(posY)
-			, width(width)
-			, height(height)
-		{}
-
-		u32 posX;
-		u32 posY;
-		u32 width;
-		u32 height;
-	};
-
 	class NativeWindow
 	{
 	public:
-		NativeWindow(const String& title, const WindowGeometry& geometry);
+		NativeWindow(const String& title, const Rect2D& geometry);
 		~NativeWindow();
 
 		void Activate();
 		void Deactivate();
 		bool IsActive() const { return m_activated; }
+		HWND GetHandle() const { return m_win32Handle; }
 
 	protected:
 		static LRESULT CALLBACK WindowCallback(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);

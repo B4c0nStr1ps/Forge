@@ -7,6 +7,9 @@
     <Filter Include="Core">
       <UniqueIdentifier>{86d7c5be-16a2-404c-aa1b-48b423d2c65a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Rendering">
+      <UniqueIdentifier>{2e1c6271-c8d5-467c-bb29-9fb3e8d959e4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Source\BsLib\Framework\Application.cpp">
@@ -14,6 +17,15 @@
     </ClCompile>
     <ClCompile Include="..\Source\BsLib\Framework\NativeWindow.cpp">
       <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\BsLib\Rendering\RenderingSystem.cpp">
+      <Filter>Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\BsLib\Rendering\D3D11Backend.cpp">
+      <Filter>Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\BsLib\Rendering\D3D11Viewport.cpp">
+      <Filter>Rendering</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -52,6 +64,21 @@
     </ClInclude>
     <ClInclude Include="..\Source\BsLib\Core\Array.h">
       <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\BsLib\Rendering\RenderingSystem.h">
+      <Filter>Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\BsLib\Rendering\D3D11Backend.h">
+      <Filter>Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\BsLib\Core\Rect2D.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\BsLib\Rendering\D3D11Viewport.h">
+      <Filter>Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\BsLib\Rendering\D3D11Api.h">
+      <Filter>Rendering</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

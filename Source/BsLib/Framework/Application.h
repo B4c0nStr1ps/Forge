@@ -2,6 +2,7 @@
 
 #include "..\Core\Core.h"
 #include "NativeWindow.h"
+#include "../Rendering/D3D11Backend.h"
 
 namespace Bs::Framework
 {
@@ -20,5 +21,7 @@ namespace Bs::Framework
 	protected:
 		bool m_exitMainLoopRequested = false;
 		UniquePtr<NativeWindow> m_nativeWindow;
+		UniquePtr<Rendering::D3D11Backend> m_renderingBackend;
+
 	};
 }
