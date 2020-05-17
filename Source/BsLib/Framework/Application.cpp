@@ -17,17 +17,15 @@ namespace Bs::Framework
 
 	void Application::RunMainLoop()
 	{
-		bool run = true;
-
 		MSG msg;
-		while (run)
+		while (!WasExitMainLoopRequested())
 		{
 			while (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
 			{
 				if (msg.message == WM_QUIT)
 				{
 					ExitMainLoop();
-					run = false;
+					break;
 				}
 
 				TranslateMessage(&msg);
@@ -36,7 +34,7 @@ namespace Bs::Framework
 
 			if (!m_nativeWindow->IsActive())
 			{
-				run = false;
+				ExitMainLoop();
 			}
 		}
 	}
