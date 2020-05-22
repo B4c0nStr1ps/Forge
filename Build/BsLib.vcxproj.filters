@@ -18,13 +18,13 @@
     <ClCompile Include="..\Source\BsLib\Framework\NativeWindow.cpp">
       <Filter>Framework</Filter>
     </ClCompile>
-    <ClCompile Include="..\Source\BsLib\Rendering\RenderingSystem.cpp">
-      <Filter>Rendering</Filter>
-    </ClCompile>
     <ClCompile Include="..\Source\BsLib\Rendering\D3D11Backend.cpp">
       <Filter>Rendering</Filter>
     </ClCompile>
     <ClCompile Include="..\Source\BsLib\Rendering\D3D11Viewport.cpp">
+      <Filter>Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\BsLib\Rendering\RenderGraph.cpp">
       <Filter>Rendering</Filter>
     </ClCompile>
   </ItemGroup>
@@ -65,9 +65,6 @@
     <ClInclude Include="..\Source\BsLib\Core\Array.h">
       <Filter>Core</Filter>
     </ClInclude>
-    <ClInclude Include="..\Source\BsLib\Rendering\RenderingSystem.h">
-      <Filter>Rendering</Filter>
-    </ClInclude>
     <ClInclude Include="..\Source\BsLib\Rendering\D3D11Backend.h">
       <Filter>Rendering</Filter>
     </ClInclude>
@@ -81,6 +78,15 @@
       <Filter>Rendering</Filter>
     </ClInclude>
     <ClInclude Include="..\Source\BsLib\Core\FixedArray.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\BsLib\Rendering\RenderGraph.hpp">
+      <Filter>Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\BsLib\Core\Math.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\BsLib\Core\Vector.hpp">
       <Filter>Core</Filter>
     </ClInclude>
   </ItemGroup>

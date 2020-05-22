@@ -16,20 +16,20 @@ namespace Bs
 		template<typename F, bool Small>
 		struct Model;
 
-		static constexpr size_t k_SmallSize = sizeof(void*) * 4;
+		static constexpr size_t k_smallSize = sizeof(void*) * 4;
 
 		static constexpr Concept s_empty{ [](void*) noexcept {} };
 
 		const Concept* m_concept = &s_empty;
 
-		std::aligned_storage_t<k_SmallSize> m_model;
+		std::aligned_storage_t<k_smallSize> m_model;
 
 	public:
 
 		template<typename F>
 		Function(F&& f)
 		{
-			constexpr bool isSmall = sizeof(Model<std::decay_t<F>, true>) <= k_SmallSize;
+			constexpr bool isSmall = sizeof(Model<std::decay_t<F>, true>) <= k_smallSize;
 			new (&m_model) Model<std::decay_t<F>, isSmall>(std::forward<F>(f));
 			m_concept = &Model<std::decay_t<F>, isSmall>::s_vtable;
 		}

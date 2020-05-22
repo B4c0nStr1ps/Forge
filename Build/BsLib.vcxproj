@@ -167,7 +167,7 @@
     <ClCompile Include="..\Source\BsLib\Framework\NativeWindow.cpp" />
     <ClCompile Include="..\Source\BsLib\Rendering\D3D11Backend.cpp" />
     <ClCompile Include="..\Source\BsLib\Rendering\D3D11Viewport.cpp" />
-    <ClCompile Include="..\Source\BsLib\Rendering\RenderingSystem.cpp" />
+    <ClCompile Include="..\Source\BsLib\Rendering\RenderGraph.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Source\BsLib\Core\Array.h" />
@@ -176,18 +176,20 @@
     <ClInclude Include="..\Source\BsLib\Core\DebugBreak.h" />
     <ClInclude Include="..\Source\BsLib\Core\FixedArray.h" />
     <ClInclude Include="..\Source\BsLib\Core\Function.h" />
+    <ClInclude Include="..\Source\BsLib\Core\Math.hpp" />
     <ClInclude Include="..\Source\BsLib\Core\Pointer.h" />
     <ClInclude Include="..\Source\BsLib\Core\Rect2D.h" />
     <ClInclude Include="..\Source\BsLib\Core\String.h" />
     <ClInclude Include="..\Source\BsLib\Core\Types.h" />
     <ClInclude Include="..\Source\BsLib\Core\TypeTraits.h" />
+    <ClInclude Include="..\Source\BsLib\Core\Vector.hpp" />
     <ClInclude Include="..\Source\BsLib\Framework\Application.h" />
     <ClInclude Include="..\Source\BsLib\Framework\NativeWindow.h" />
     <ClInclude Include="..\Source\BsLib\Framework\WindowsApi.h" />
     <ClInclude Include="..\Source\BsLib\Rendering\D3D11Api.h" />
     <ClInclude Include="..\Source\BsLib\Rendering\D3D11Backend.h" />
     <ClInclude Include="..\Source\BsLib\Rendering\D3D11Viewport.h" />
-    <ClInclude Include="..\Source\BsLib\Rendering\RenderingSystem.h" />
+    <ClInclude Include="..\Source\BsLib\Rendering\RenderGraph.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

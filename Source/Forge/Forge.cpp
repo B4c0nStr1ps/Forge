@@ -1,5 +1,6 @@
 #include <BsLib/Framework/WindowsApi.h>
 #include <BsLib/Framework/Application.h>
+#include <BsLib/Core/Math.hpp>
 
 int WINAPI WinMain(HINSTANCE instance, HINSTANCE previousInstance, LPSTR commandLine, int showCommand)
 {
